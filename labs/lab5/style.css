@@ -39,7 +39,34 @@ header a {
     text-decoration: none;
 }
 
+.list {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 .list a {
-    color: teal;
     text-decoration: none;
+    color: teal;
+}
+
+.list-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid teal;
+    padding: 10px;
+    color: teal;
+    font-size: 0.8em;
+}
+
+input {
+    padding: 10px;
+    font-size: 0.8em;
 }
