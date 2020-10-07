@@ -14,6 +14,10 @@ header {
     font-family: 'Roboto Slab', serif;
 }
 
+header a {
+    color: gold;
+}
+
 h1 {
     margin: 0;
 }
@@ -21,25 +25,42 @@ h1 {
 /*********** LISTS ************/
 #todo-lists {
     margin: 0 auto;
-    width: 80%;
     padding-top: 10px;
+    width: 80%;
 }
 
 .list {
+    background-color: #eee;
+    border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
 }
 
+.list a {
+    text-decoration: none;
+    color: teal;
+}
+
 .list-title {
+    font-size: 2em;
+    font-weight: bold;
     margin-left: 20px;
 }
 
-header a {
-    color: gold;
-    text-decoration: none;
+button {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid teal;
+    padding: 10px;
+    color: teal;
+    font-size: 0.8em;
 }
 
-.list a {
-    color: teal;
-    text-decoration: none;
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    font-size: 0.8em;
 }
