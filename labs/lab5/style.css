@@ -75,3 +75,10 @@ button:hover {
     cursor: pointer;
     filter: brightness(1.5);
 }
+
+button:disabled {
+    filter: brightness(.9);
+    background-color: lightgray;
+    color: white;
+    border: none;
+}

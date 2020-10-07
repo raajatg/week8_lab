@@ -26,8 +26,8 @@
                     <li><input type="checkbox" onclick="finishItem(this)"> Milk <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button></li>
                     <li><input type="checkbox" onclick="finishItem(this)"> Cereal <button class="delete-item" onclick="deleteListItem(this.parentNode)">X</button> </li>
                 </ol>
-				<input id='new-item-text' onchange="inputValidation(value)" type="text"></input>
-				<button id="add-new-item-button" onclick="addListItem()">Add New Item</button>
+				<input id='new-item-text' oninput="inputValidation(this.value)" type="text"></input>
+				<button id="add-new-item-button" onclick="addListItem()" disabled>Add New Item</button>
             </div>
 		</div>
 		

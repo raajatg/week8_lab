@@ -19,7 +19,6 @@ function finishItem(element) {
 // https://techstacker.com/how-to-enable-and-disable-buttons-with-javascript/
 function inputValidation(value) {
     const myButton = document.getElementById('add-new-item-button');
-    // console.log(value);
     if(value === "") {
         myButton.disabled = true; 
     }
