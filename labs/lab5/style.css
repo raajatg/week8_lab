@@ -70,3 +70,7 @@ input {
     padding: 10px;
     font-size: 0.8em;
 }
+
+button:hover {
+    cursor: pointer;
+}
