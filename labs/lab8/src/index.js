@@ -3,6 +3,7 @@
 // "Add Random Doggo" fetches a randmo dog image using the Dog API
 // https://dog.ceo/dog-api/documentation
 
+// array to keep track of saved dogs locally
 let dogArray = [];
 
 function CardTemplate(parentEl, headerText, bodyText, imgUrl) {
