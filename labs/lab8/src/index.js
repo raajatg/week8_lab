@@ -52,13 +52,13 @@ function getBreedName(msgUrl) {
 }
 
 function onLoad() {
-  let myDog = localStorage.getItem("myDogs");
-  if(myDog === null) {
+  let myDogs = localStorage.getItem("myDogs");
+  if(myDogs === null) {
     console.log('no dogs!');
   }
   else {
-    const dog = JSON.parse(myDog);
-    dog.forEach((dog) => {
+    const savedDogs = JSON.parse(myDogs);
+    savedDogs.forEach((dog) => {
       CardTemplate(divDoggoContainer, dog.header, dog.body, dog.imgUrl);
       dogArray.push(dog);
     });
