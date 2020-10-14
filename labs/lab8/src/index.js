@@ -60,6 +60,7 @@ function onLoad() {
     const dog = JSON.parse(myDog);
     dog.forEach((dog) => {
       CardTemplate(divDoggoContainer, dog.header, dog.body, dog.imgUrl);
+      dogArray.push(dog);
     });
   }
 }
