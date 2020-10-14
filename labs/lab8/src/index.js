@@ -55,7 +55,7 @@ function getBreedName(msgUrl) {
 
   // new function to load dogs from localStorage - walk through this in exercise
 function onLoad() {
-  let myDogs = localStorage.getItem("myDogs");
+  const myDogs = localStorage.getItem("myDogs");
   if(myDogs === null) {
     console.log('no dogs!');
   }
