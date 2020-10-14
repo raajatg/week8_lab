@@ -28,6 +28,7 @@ function CardTemplate(parentEl, headerText, bodyText, imgUrl) {
   pBodyText.innerHTML = bodyText;
   divTextContainer.appendChild(pBodyText);
 
+  // new content to save dogs - walk through this in exercise
   let saveDogBtn = document.createElement('button');
   saveDogBtn.textContent = 'Save!';
   saveDogBtn.onclick = function () {
@@ -51,6 +52,7 @@ function getBreedName(msgUrl) {
   return pathComponents.slice(-2, -1);
 }
 
+  // new function to load dogs from localStorage - walk through this in exercise
 function onLoad() {
   let myDogs = localStorage.getItem("myDogs");
   if(myDogs === null) {
@@ -83,6 +85,7 @@ aCreateRandom.onclick = function (e) {
   createNewRandomDoggoCard(divDoggoContainer);
 };
 
+  // new function to remove dogs from localStorage - walk through this in exercise
 let clearButton = document.getElementById('clear-session-btn');
 clearButton.onclick = function (e) {
   localStorage.removeItem('myDogs');
