@@ -45,9 +45,25 @@ function createNewRandomDoggoCard(containerEl) {
     });
 }
 
+let dog = {
+  breed: "basenji",
+  name: "Frodo",
+  getBreedName: function () {
+    console.log('function this', this);
+    return this.breed + " " + this.name;
+  },
+  getBreedNameArrow: () => {
+    console.log('arrow this', this);
+    return this.breed + " " + this.name;
+  }
+}
+
 let aCreateRandom = document.getElementById("a-create-random");
 const divDoggoContainer = document.getElementById("div-doggos");
 aCreateRandom.onclick = function (e) {
   e.preventDefault();
+  console.log(dog);
+  console.log('this will return a dog name', dog.getBreedName());
+  console.log('this will return undefined because the this keyword is not operating at the dog scope', dog.getBreedNameArrow());
   createNewRandomDoggoCard(divDoggoContainer);
 };
