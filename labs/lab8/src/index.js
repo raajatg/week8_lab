@@ -7,7 +7,6 @@
 let dogArray = [];
 
 function CardTemplate(parentEl, headerText, bodyText, imgUrl) {
-  // to fill in
   let divContainer = document.createElement("div");
   divContainer.className = "card";
   parentEl.appendChild(divContainer);
@@ -38,8 +37,11 @@ function CardTemplate(parentEl, headerText, bodyText, imgUrl) {
       body: bodyText,
       imgUrl: imgUrl
     }
+    // End of Part 3
     dogArray.push(dog);
     const json = JSON.stringify(dogArray);
+    // End of Part 2
+    // const json = JSON.stringify(dog);
     localStorage.setItem("myDogs", json);
   };
   divContainer.appendChild(saveDogBtn);
@@ -58,9 +60,13 @@ function onLoad() {
   const myDogs = localStorage.getItem("myDogs");
   if(myDogs === null) {
     console.log('no dogs!');
+    return;
   }
   else {
     const savedDogs = JSON.parse(myDogs);
+    // End of Part 2
+    // CardTemplate(divDoggoContainer, savedDogs.header, savedDogs.body, savedDogs.imgUrl);
+    // End of Part 3
     savedDogs.forEach((dog) => {
       CardTemplate(divDoggoContainer, dog.header, dog.body, dog.imgUrl);
       dogArray.push(dog);
@@ -86,7 +92,7 @@ aCreateRandom.onclick = function (e) {
   createNewRandomDoggoCard(divDoggoContainer);
 };
 
-  // new function to remove dogs from localStorage - walk through this in exercise
+  // new function to remove dogs from localStorage
 let clearButton = document.getElementById('clear-session-btn');
 clearButton.onclick = function (e) {
   localStorage.removeItem('myDogs');
